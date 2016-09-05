@@ -68,3 +68,29 @@ while True:
     except StopIteration as e:
         print("Generator return value:",e.value) #拿到函数的返回值
         break
+    
+    
+#using generator(function) to print Pascal's Triangle(杨辉三角)
+def triangles():
+    #print("step 1")
+    L=[1]
+    yield L
+    #print("step 2")
+    L=[1,1]
+    yield L
+    while True:
+        length = len(L)
+        result=[1]
+        for i in range(length-1):
+            result.append(L[i]+L[i+1])
+        result.append(1)
+        #print("step ",(length+1))
+        yield result
+        L=result
+
+n=0
+for t in triangles():
+    print(t)
+    n = n + 1
+    if n == 10:
+        break
