@@ -10,4 +10,10 @@ http://www.pythontab.com/
 https://docs.python.org/3/  <br>
 https://www.python.org/doc/ <br>
 #python3入门教程
-廖雪峰python3教程
+廖雪峰python3教程  <br>
+http://www.python-course.eu/course.php <br>
+http://www.tutorialspoint.com/python/  <br>
+http://www.pyschools.com/ 
+#在线电子书
+http://www.diveintopython3.net/  dive into python3 <br>
+http://www.effectivepython.com/  effective python  <br>
