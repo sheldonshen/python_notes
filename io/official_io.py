@@ -41,3 +41,21 @@ for name,phone in table.items():
     print("{0:10}  ==> {1:10d}".format(name,phone))
 
 print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))
+
+#printf-style string format
+print("the value of pi is %5.3f." % math.pi)
+
+f=open("end.txt",'r')
+print(f.read().strip())
+print(repr(f.read()))
+f.close()
+
+f=open("end.txt",'r')
+for line in f:
+    print(line,end="")
+f.close()
+
+f=open("end.txt",'w')
+value=('the answer',42)
+s=str(value)
+print(f.write(s))
