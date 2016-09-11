@@ -1,0 +1,9 @@
+1 There are three main types of I/O:text I/O,binary I/O and raw I/O
+2 All Streams are careful about the type of data you gave to them
+3 Text I/O : expects and produces str objects
+  in-memory text streams are also available as StringIO objects
+4 refer to Class TextIOBase about the text stream API
+5 In-memory binary streams are also available as BytesIO objects
+6 The binary stream API is described in detail in the docs of BufferedIOBase.
+7 Raw IO(aka unbuffered I/O),The binary stream API is described in detail in the docs of BufferedIOBase.
+8 Binary IO(aka buffered I/O)
