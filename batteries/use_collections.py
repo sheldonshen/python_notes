@@ -214,3 +214,74 @@ for ch in 'programming':
 print(c)
     
 #collections模块提供了一些有用的集合类，可以根据需要选用
+
+#rapid tallies[计数]
+#tally occurrences of words in a list
+cnt=Counter()
+for word in ['red', 'blue', 'red', 'green', 'blue', 'blue']:
+    cnt[word]+=1
+
+print(cnt)
+
+#find the ten most common words in Hamlet
+import re 
+words=re.findall(r'\w+',open('hamlet.txt').read().lower())
+print(Counter(words).most_common(10))
+
+c=Counter() #a new,empty counter
+c=Counter('gallahad') #a new counter from an iterable
+c=Counter({'red':4,'blue':2})#a new counter from a mapping
+c=Counter(cats=4,dogs=8) #a new counter from keyword args
+
+
+c=Counter(['egg','ham'])
+print(c['bacon'])#counting of a missing element is zero
+
+c['sausage']=0
+print(c['sausage']) #counter entry with a zero count
+del c['sauage'] #del actually removes the entry
+
+c=Counter(a=4,b=2,c=0,d=-2)
+print(sorted(c.elements()))
+
+print(Counter('abracadabra').most_common(3))
+
+c = Counter(a=4, b=2, c=0, d=-2,e=2)
+# d = Counter(a=1, b=2, c=3, d=4)
+# c.subtract(d)
+# print(c)
+
+# print(sum(c.values()))
+# c.reset()
+# print(c)
+
+c=Counter(a=3,b=3)
+d=Counter(a=1,b=2)
+print(c+d) # add two counters together:c[x]+c[x]
+print(c-d) # subtract (keeping only positive counts)
+print(c & d)#intersection:min(c[x],d[x])
+print(c | d)
+
+
+c=Counter(a=2,b=-4)
+print(+c)
+print(-c)
+
+#OrderedDict
+d=OrderedDict.fromkeys('abcde')
+print(d)
+d.move_to_end('b',last=True)
+print(d)
+print('/'.join(d.keys()))
+d.move_to_end('b',last=False)
+print("/".join(d.keys()))
+
+#examples and recipes
+#regular unsorted dictionary
+d={'banana':3,'apple':4,'pear':1,'orange':2}
+#dictionary sorted by key
+print(OrderedDict(sorted(d.items(),key=lambda t:t[0])))
+#dictionary sorted by value
+print(OrderedDict(sorted(d.items(),key=lambda t:t[1])))
+# dictionary sorted by length of the key string
+print(OrderedDict(sorted(d.items(),key=lambda t:len(t[0]))))
