@@ -202,3 +202,47 @@ print(r.keys())
 print(r['qty'])
 for member in r:
     print(member)
+
+#using sqlite3 efficiently
+#1 using shortcut methods
+import sqlite3
+persons=[('Hugo','Boss'),('Calvin','Klein')]
+con=sqlite3.connect(":memory:")
+#create the table
+con.execute("create table person(firstname,lastname)")
+#fill the table
+con.executemany("insert into person(firstname,lastname) values(?,?)",persons)
+#print the table contents
+for row in con.execute("select firstname,lastname from person"):
+    print(row)
+
+print("I just deleted",con.execute("delete from person").rowcount,'rows')
+
+#2 accessing columns by name instead of by index
+import sqlite3
+con = sqlite3.connect(":memory:")
+con.row_factory = sqlite3.Row
+
+cur=con.cursor()
+cur.execute("select 'John' as name,42 as age")
+for row in cur:
+    assert row[0] == row['name']
+    assert row['nAme']==row['name']
+    assert row[1]==row['age']
+    assert row[1]==row['AgE']
+
+#using the connection as a context manager
+import sqlite3
+con=sqlite3.connect(":memory:")
+con.execute("create table person (id integer primary key,firstname varchar unique)")
+#successful,con.commit() is called automatically afterwards
+with con:
+    con.execute("insert into person(firstname) values(?)",("Joe",))
+
+# con.rollback is called after the with block finishes with an exception, the
+# exception  is still raised and must be caught
+try:
+    with con:
+        con.execute("insert into person(firstname) values(?)",("Joe"))
+except sqlite3.ProgrammingError:
+    print("could't add Joe twice")
