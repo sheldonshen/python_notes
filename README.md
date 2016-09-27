@@ -13,7 +13,9 @@ https://www.python.org/doc/ <br>
 廖雪峰python3教程  <br>
 http://www.python-course.eu/course.php <br>
 http://www.tutorialspoint.com/python/  <br>
-http://www.pyschools.com/ 
+http://www.pyschools.com/ <br>
+http://wiki.jikexueyuan.com/project/simple-python-course/
 #在线电子书
 http://www.diveintopython3.net/  dive into python3 <br>
 http://www.effectivepython.com/  effective python  <br>
+
