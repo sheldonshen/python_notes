@@ -14,8 +14,12 @@ https://www.python.org/doc/ <br>
 http://www.python-course.eu/course.php <br>
 http://www.tutorialspoint.com/python/  <br>
 http://www.pyschools.com/ <br>
-http://wiki.jikexueyuan.com/project/simple-python-course/
 #在线电子书
 http://www.diveintopython3.net/  dive into python3 <br>
 http://www.effectivepython.com/  effective python  <br>
+#练手小项目视频
+http://study.163.com/course/courseMain.htm?courseId=1263029           用Python做2048游戏<br>
+https://ke.qq.com/user/index/index.html#cid=95576&term_id=100097390   跨平台的记事本<br>
+http://edu.51cto.com/index.php?do=lession&id=48003                    BBS<br>
+http://www.imooc.com/learn/712                                        数据采集<br>
 
