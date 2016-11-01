@@ -22,4 +22,5 @@ http://study.163.com/course/courseMain.htm?courseId=1263029           用Python
 https://ke.qq.com/user/index/index.html#cid=95576&term_id=100097390   跨平台的记事本<br>
 http://edu.51cto.com/index.php?do=lession&id=48003                    BBS<br>
 http://www.imooc.com/learn/712                                        数据采集<br>
+http://python.jobbole.com/category/project/                           小项目<br>
 
